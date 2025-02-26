@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #C0C0C0, #696969);
+}
+.container {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+}
+input, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+button {
+    background: linear-gradient(to right, cyan, gray);
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+button:hover {
+    background: linear-gradient(to right, gray, cyan);
+}
