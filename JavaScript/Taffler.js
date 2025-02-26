@@ -28,18 +28,29 @@ document.getElementById('find-z').addEventListener('click', function() {
         const z = (0.53 * x1) + (0.13 * x2) + (0.18 * x3) + (0.16 * x4);
 
         if (z >= 0.3) {
-            alert("Green region");
+            Toast.fire({
+                icon: "success",
+                title: "Green region ,The company is performing well and is unlikely to go bankrupt."
+              });
         } else if (z <= 0.2) {
-            alert("Red region");
+            Toast.fire({
+                icon: "error",
+                title: "Red Region."
+              });
         } else {
-            alert("No Classification");
+            Toast.fire({
+                icon: "warning",
+                title: "No Classification."
+              });
         }
     } catch (error) {
-        alert("Format Error");
+        Toast.fire({
+            icon: "error",
+            title: "Format Error.."
+          });
     }
 });
 
 document.getElementById('back-home').addEventListener('click', function() {
-    // Implement back to home functionality, like navigating to a different page
-    window.location.href = 'Home.html'; // For example, replace with the actual home URL
+    window.location.href = 'Home.html'; 
 });
