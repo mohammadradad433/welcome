@@ -1,4 +1,17 @@
+const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 10000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    }
+  });
+
 function calculateZ() {
+    let incomestatement = parseFloat(document.getElementById("Incomestatment").value);
     let totalCapital = parseFloat(document.getElementById("totalCapital").value);
     let fixedAssets = parseFloat(document.getElementById("fixedAssets").value);
     let totalCurrentAssets = parseFloat(document.getElementById("totalCurrentAssets").value);
@@ -7,27 +20,38 @@ function calculateZ() {
     let totalLiabilities = parseFloat(document.getElementById("totalLiabilities").value);
     let salesRevenue = parseFloat(document.getElementById("salesRevenue").value);
     
-    if (isNaN(totalCapital) || isNaN(fixedAssets) || isNaN(totalCurrentAssets) || isNaN(profitBeforeInterest) || 
+    if (isNaN(incomestatement) ||isNaN(totalCapital) || isNaN(fixedAssets) || isNaN(totalCurrentAssets) || isNaN(profitBeforeInterest) || 
         isNaN(longTermLiabilities) || isNaN(totalLiabilities) || isNaN(salesRevenue)) {
-        document.getElementById("result").innerText = "Please enter valid numbers in all fields.";
+          Toast.fire({
+            icon: "error",
+            title: "Please enter valid numbers in all fields."
+          });
         return;
     }
     
-    let x1 = totalCapital / totalCurrentAssets;
+    let x1 = incomestatement / totalCapital;
     let x2 = fixedAssets / totalCurrentAssets;
-    let x3 = profitBeforeInterest / totalCapital;
-    let x4 = longTermLiabilities / totalLiabilities;
-    let x5 = salesRevenue / totalCapital;
+    let x3 = profitBeforeInterest /totalCapital ;
+    let x4 =  longTermLiabilities/totalLiabilities ;
+    let x5 = salesRevenue /totalCapital ;
     let z = (1.2 * x1) + (1.4 * x2) + (3.3 * x3) + (0.6 * x4) + (0.999 * x5);
     
-    let message = "";
     if (z >= 2.99) {
-        message = "The company is performing well and is unlikely to go bankrupt.";
+        Toast.fire({
+            icon: "success",
+            title: "The company is performing well and is unlikely to go bankrupt."
+          });
     } else if (z < 2.99 && z > 1.81) {
-        message = "The company is in the gray area.";
+        Toast.fire({
+            icon: "warning",
+            title: "The company is in the gray area."
+          });
     } else {
-        message = "The company is at risk of financial distress.";
+        Toast.fire({
+            icon: "error",
+            title: "The company is at risk of financial distress."
+          });
     }
     
-    document.getElementById("result").innerText = "Z-score: " + z.toFixed(2) + "\n" + message;
+    
 }

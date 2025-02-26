@@ -2,7 +2,7 @@ const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
     showConfirmButton: false,
-    timer: 3000,
+    timer: 10000,
     timerProgressBar: true,
     didOpen: (toast) => {
       toast.onmouseenter = Swal.stopTimer;
@@ -25,7 +25,7 @@ function exitApp() {
     if (confirm("Are you sure you want to exit?")) {
         Toast.fire({
             icon: "success",
-            title: "Signed in successfully"
+            title: "Exiting..."
           });
         window.close();
     }

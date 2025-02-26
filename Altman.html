@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Altman Z-Score</title>
-    <link rel="stylesheet" href="CSS/Altman.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Altman</title>
+  <link rel="stylesheet" href="CSS/Altman.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Altman Z-Score Calculator</h2>
-        <label>Total Capital: <input type="number" id="totalCapital"></label><br>
-        <label>Fixed Assets: <input type="number" id="fixedAssets"></label><br>
-        <label>Total Current Assets: <input type="number" id="totalCurrentAssets"></label><br>
-        <label>Profit Before Interest and Taxes: <input type="number" id="profitBeforeInterest"></label><br>
-        <label>Long-Term Liabilities: <input type="number" id="longTermLiabilities"></label><br>
-        <label>Total Liabilities: <input type="number" id="totalLiabilities"></label><br>
-        <label>Sales Revenue: <input type="number" id="salesRevenue"></label><br>
-        <button onclick="calculateZ()">Find Z</button>
-        <button onclick="window.location.href='home.html'">Back to Home</button>
-        <p id="result"></p>
+  <div class="container">
+    <h1>Altman Z-Score Calculator</h1>
+    <div class="form">
+        <label for="Incomestatment">Income statment:</label>
+        <input type="number" id="Incomestatment" class="input-field">
+
+        <label for="totalCapital">Total Capital:</label>
+        <input type="number" id="totalCapital" class="input-field">
+        
+        <label for="fixedAssets">Fixed Assets:</label>
+        <input type="number" id="fixedAssets" class="input-field">
+    
+        <label for="totalCurrentAssets">Total Current Assets:</label>
+        <input type="number" id="totalCurrentAssets" class="input-field">
+        
+        <label for="profitBeforeInterest">Profit Before Interest and Taxes:</label>
+        <input type="number" id="profitBeforeInterest" class="input-field">
+       
+        <label for="longTermLiabilities">Long-Term Liabilities:</label>
+        <input type="number" id="longTermLiabilities" class="input-field">
+        
+        <label for="totalLiabilities">Total Liabilities:</label>
+        <input type="number" id="totalLiabilities" class="input-field">
+        
+        
+        <label for="salesRevenue">Sales Revenue:</label>
+        <input type="number" id="salesRevenue" class="input-field">
+      
+      <button id="find-z" class="button">Find Z</button>
+      <button id="back-home" class="button">Back to home</button>
     </div>
-    <script src="JavaScript/Altman.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="JavaScript/Altman.js"></script>
 </body>
 </html>

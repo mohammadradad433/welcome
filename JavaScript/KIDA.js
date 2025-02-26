@@ -1,3 +1,15 @@
+const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 10000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    }
+  });
+
 document.getElementById('find-z').addEventListener('click', function() {
     try {
         const postWarGoals = parseFloat(document.getElementById('post-war-goals').value);
@@ -17,15 +29,24 @@ document.getElementById('find-z').addEventListener('click', function() {
         const z = (1.042 * x1) + (0.42 * x2) - (0.461 * x3) - (0.463 * x4) - (0.271 * x5);
 
         if (z >= 0) {
-            alert("Green region");
+            Toast.fire({
+                icon: "success",
+                title: "The company is performing well and is unlikely to go bankrupt."
+              });
         } else {
-            alert("Red region");
+            Toast.fire({
+                icon: "error",
+                title: "RED REGION."
+              });
         }
     } catch (error) {
-        alert("Format Error");
+        Toast.fire({
+            icon: "error",
+            title: "Error..."
+          });
     }
 });
 
 document.getElementById('back-home').addEventListener('click', function() {
-    window.location.href = 'home.html'; 
+    window.location.href = 'Home.html'; 
 });

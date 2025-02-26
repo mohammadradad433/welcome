@@ -1,3 +1,15 @@
+const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 10000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    }
+  });
+
 document.getElementById('find-z').addEventListener('click', function() {
     try {
         const profitsBeforeTaxes = parseFloat(document.getElementById('profits-before-taxes').value);
@@ -29,5 +41,5 @@ document.getElementById('find-z').addEventListener('click', function() {
 
 document.getElementById('back-home').addEventListener('click', function() {
     // Implement back to home functionality, like navigating to a different page
-    window.location.href = 'home.html'; // For example, replace with the actual home URL
+    window.location.href = 'Home.html'; // For example, replace with the actual home URL
 });
