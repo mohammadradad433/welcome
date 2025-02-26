@@ -52,6 +52,4 @@ function calculateZ() {
             title: "The company is at risk of financial distress."
           });
     }
-    
-    
 }
