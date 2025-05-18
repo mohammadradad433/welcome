@@ -13,16 +13,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px gray;
-    margin-top: 5%;
-}
-.container2 {
-    width: 40%;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px gray;
-    margin-top: 5%;
+    margin-top: 15%;
 }
 button {
     margin-top: 20px;
