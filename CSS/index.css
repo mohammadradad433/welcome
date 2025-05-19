@@ -5,8 +5,12 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 100%;
+    position: relative;
+
 }
 .container {
+    min-height: calc(100vh - 120px);
     width: 60%;
     margin: auto;
     background: rgba(255, 255, 255, 0.8);
@@ -14,15 +18,12 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 10px gray;
     margin-top: 5%;
-}
-.container2 {
-    width: 40%;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px gray;
-    margin-top: 5%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;     /* لترتيب العناصر عمودياً */
+    justify-content: center;    /* توسيط عمودي */
+    align-items: center;        /* توسيط أفقي */
+    text-align: center;
 }
 button {
     margin-top: 20px;
@@ -36,4 +37,30 @@ button {
 }
 button:hover {
     background: linear-gradient(to right, gray, cyan);
+}
+footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 100px;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+}
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: #66b2ff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #3399ff;
+    text-decoration: none;
 }
