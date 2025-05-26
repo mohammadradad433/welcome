@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="cont" class="container">
         <h2>Welcome to the Financial Failure Prediction Program</h2>
         <h2>مرحبا بك في برنامج التنبؤ بالفشل المالي</h2>
         <button onclick="window.location.href='Gen-Idea.html'">Continue</button>
@@ -19,5 +19,10 @@
         <p class="footer-item"><span style="font-weight: bold; color: black;">&copy;Designed by</span> ENG.Mohammad Khader Raddad</p>
         <p class="footer-item"><a href="AboutUs.html" target="_blank" rel="noopener noreferrer">About Us</a></p>
     </footer>
+    <script>
+        window.onload = () => {
+            document.getElementById("cont").classList.add("show");
+        };
+    </script>
 </body>
 </html>

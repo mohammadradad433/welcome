@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="CSS/Details.css">
 </head>
 <body>
-<div class="container">
+<div id="cont" class="container">
 <h1>نبذة تعريفية عن النماذج المستخدمة: </h1>
     <h2>1-Altman Model(نموذج التمان)</h2>
     <h2>هو أداة تحليلية تستخدم للتنبؤ بإفلاس الشركات استنادًا إلى مجموعة من المؤشرات المالية. تم تطويره من قبل إدوارد ألتمان ويعتمد على تحليل خمس نسب مالية رئيسية تساهم في حساب قيمة النموذج و يُعتبر هذا النموذج من الأدوات الأكثر استخدامًا في التنبؤ بالإفلاس، حيث يحدد ما إذا كانت الشركة في خطر مالي أم لا</h2>
@@ -17,5 +17,10 @@
     <button onclick="window.location.href='Home.html'">Choose the Model</button>
     <button onclick="window.location.href='Gen-Idea.html'">Back</button>
 </div>
+<script>
+    window.onload = () => {
+        document.getElementById("cont").classList.add("show");
+    };
+</script>
 </body>
 </html>

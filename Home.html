@@ -7,7 +7,7 @@
    <link rel="stylesheet" href="CSS/home.css">
 </head>
 <body>
-    <div class="container">
+    <div id="cont" class="container">
         <button class="button" onclick="window.location.href='Altman.html'">Altman</button><br>
         <button class="button" onclick="window.location.href='KIDA.html'">KIDA</button><br>
         <button class="button" onclick="window.location.href='Taffler.html'">Taffler</button><br>
@@ -16,5 +16,10 @@
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./JavaScript/home.js"></script>
+    <script>
+        window.onload = () => {
+            document.getElementById("cont").classList.add("show");
+        };
+    </script>
 </body>
 </html>
