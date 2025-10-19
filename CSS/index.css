@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('wave.jpeg');
+    background-image: url('indeximg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,34 +45,41 @@ button {
 button:hover {
     background: linear-gradient(to right, gray, cyan);
 }
-footer {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px gray;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 100px;
-    font-size: 14px;
-    width: 100%;
-    flex-wrap: wrap;
+.footer {
+  background: linear-gradient(135deg, #f9f9f9, #e9f3ff);
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 100px;
+  font-size: 15px;
+  width: 100%;
+  color: #333;
+  font-family: "Segoe UI", sans-serif;
 }
+
 .footer-content {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
-footer a {
-    color: #66b2ff;
-    text-decoration: underline;
-}
-
-footer a:hover {
-    color: #3399ff;
-    text-decoration: none;
-}
 .footer-item {
-    flex: 1 1 40px;
-    margin: 5px;
+  flex: 1 1 200px;
+  min-width: 180px;
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #0078d7;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer a:hover {
+  color: #005bb5;
+  text-shadow: 0 0 5px rgba(0, 120, 215, 0.4);
 }
