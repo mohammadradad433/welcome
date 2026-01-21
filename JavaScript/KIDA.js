@@ -21,6 +21,22 @@ document.getElementById('find-z').addEventListener('click', function() {
         let sales = parseFloat(document.getElementById('sales').value);
         let x1,x2,x3,x4,x5;
 
+        if (
+            isNaN(postWarGoals) ||
+            isNaN(collectionOfDeposit) ||
+            isNaN(reservesAndFunds) ||
+            isNaN(collectionOfLoans) ||
+            isNaN(cashDeposit) ||
+            isNaN(bankedSums) ||
+            isNaN(sales)
+            ) {
+            Toast.fire({
+                icon: "error",
+                title: "يرجى إدخال أرقام صحيحة في جميع الحقول."
+            });
+            return;
+        }
+
         if (collectionOfDeposit == 0) {
             Toast.fire({
                 icon: "error",

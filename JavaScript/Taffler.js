@@ -21,6 +21,22 @@ document.getElementById('find-z').addEventListener('click', function() {
         let dailyOperationalExpenses = parseFloat(document.getElementById('daily-operational-expenses').value);
         let x1,x2,x3,x4;
 
+        if (
+            isNaN(profitsBeforeTaxes) ||
+            isNaN(currentLiabilities) ||
+            isNaN(currentAssets) ||
+            isNaN(requests) ||
+            isNaN(collectionOfDeposits) ||
+            isNaN(internalTransferMargin) ||
+            isNaN(dailyOperationalExpenses)
+            ) {
+            Toast.fire({
+                icon: "error",
+                title: "يرجى إدخال أرقام صحيحة في جميع الحقول."
+            });
+            return;
+        }
+
 
         if (currentLiabilities == 0) {
             Toast.fire({

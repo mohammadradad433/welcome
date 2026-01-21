@@ -24,7 +24,7 @@ function calculateZ() {
         isNaN(longTermLiabilities) || isNaN(totalLiabilities) || isNaN(salesRevenue)) {
           Toast.fire({
             icon: "error",
-            title: "Please enter valid numbers in all fields."
+            title: "يرجى إدخال أرقام صحيحة في جميع الحقول."
           });
         return;
     }
