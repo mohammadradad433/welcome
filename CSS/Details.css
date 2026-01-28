@@ -33,16 +33,3 @@ body {
     transform: translateX(0);
     opacity: 1;
 }
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    background: linear-gradient(to right, cyan, gray);
-    border: none;
-    cursor: pointer;
-    color: white;
-    border-radius: 5px;
-}
-button:hover {
-    background: linear-gradient(to right, gray, cyan);
-}
